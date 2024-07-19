@@ -13,6 +13,9 @@ class SpeechToText:
     def recognize(self, audio):
         try:
             print("Recognizing...")
+            # Print the raw audio data
+            audio_data = audio.get_wav_data()
+            print(f"Raw Audio Data: {audio_data[:100]}...")  # Printing first 100 bytes for brevity
             text = self.recognizer.recognize_google(audio, language=self.language)
             print(f"Recognized Text: {text}")
             return text
