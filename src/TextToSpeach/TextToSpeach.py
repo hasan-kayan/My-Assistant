@@ -1,7 +1,7 @@
 from gtts import gTTS
 import os
 
-def text_to_speech(text, language='tr', output_file='output.mp3'):
+def text_to_speech(text, language='en', output_file='output.mp3'):
     # Create a gTTS object
     tts = gTTS(text=text, lang=language, slow=False)
     
@@ -14,8 +14,8 @@ def text_to_speech(text, language='tr', output_file='output.mp3'):
     # os.system(f"mpg321 {output_file}") # For Linux
 
 if __name__ == "__main__":
-    text = "Kafanı sikiyim bora"
-    language = 'tr'
+    text = "Hello World from Text to Speech!"
+    language = 'en'
     output_file = 'output.mp3'
     
     text_to_speech(text, language, output_file)
